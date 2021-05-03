@@ -35,6 +35,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="60dp"
+        android:text="Hitta matalternativen"
         android:id="@+id/Mat_alternativ_knapp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
