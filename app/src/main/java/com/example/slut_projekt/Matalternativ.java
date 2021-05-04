@@ -30,5 +30,13 @@ public class Matalternativ extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button button2 = findViewById(R.id.Pasta_knapp);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (Matalternativ.this, Pizza.class);
+                startActivity(intent);
+            }
+        });
     }
 }
