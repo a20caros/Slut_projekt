@@ -27,6 +27,7 @@ public class Matalternativ extends AppCompatActivity {
 
     private ListView listView;
     ArrayAdapter<Mat> adapter;
+    ArrayList<Mat> list;
 
 
     @Override
@@ -34,6 +35,7 @@ public class Matalternativ extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matalternativ);
         try{
+            list = new ArrayList<>();
             adapter = new ArrayAdapter<>(this,R.layout.list_textview);
             listView = findViewById(R.id.listview);
             listView.setAdapter(adapter);
