@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 public class Matalternativ extends AppCompatActivity {
 
-    private Mat maträtter;
+    private Mat[] maträtter;
     private ListView listView;
     ArrayAdapter<Mat> adapter;
     ArrayList<Mat> list;
@@ -90,13 +90,13 @@ public class Matalternativ extends AppCompatActivity {
         @Override
         protected void onPostExecute(String json) {
             Gson gson = new Gson();
-            maträtter = gson.fromJson(json, Mat.class);
-            adapter = new ArrayAdapter<Mat>(Matalternativ.this, R.layout.list_textview);
+            maträtter = gson.fromJson(json, Mat[].class);
+            adapter = new ArrayAdapter<Mat>(Matalternativ.this, R.layout.list_textview,maträtter);
             listView = findViewById(R.id.listview);
             listView.setAdapter(adapter);
 
-            for (int i = 0; i++) {
-                Log.d("==>", "Maträtt" + maträtter[i]);
+            for (int i = 0; i < maträtter.length; i++) {
+                Log.d("==>", "Maträtt" + maträtter[i].getName());
             }
         }
     }
