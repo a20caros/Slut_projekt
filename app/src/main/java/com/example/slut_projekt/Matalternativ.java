@@ -26,6 +26,8 @@ import java.util.ArrayList;
 public class Matalternativ extends AppCompatActivity {
 
     private ListView listview;
+    ArrayAdapter<> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,7 +107,9 @@ public class Matalternativ extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String json) {
-
+        adapter= new ArrayAdapter<>(this, R.layout.activity_matalternativ);
+        listview = findViewById(R.id.listview);
+        listview.setAdapter(adapter);
             Log.d("TAG", json);
         }
     }
