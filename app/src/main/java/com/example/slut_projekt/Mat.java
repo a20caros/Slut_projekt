@@ -11,4 +11,8 @@ public class Mat {
     private int size;
     private int cost;
     private Auxdata auxdata;
+
+    public String getName() {
+        return name;
+    }
 }
