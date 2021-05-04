@@ -18,37 +18,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/framsida2"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        android:paddingHorizontal="50dp">
-
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="60dp"
-            android:text="Hamburgare"
-            android:id="@+id/Hamburgare_knapp"/>
-
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="60dp"
-            android:text="Pizza"
-            android:id="@+id/Pizza_knapp"/>
-
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="60dp"
-            android:text="Pasta"
-            android:id="@+id/Pasta_knapp"/>
-    </LinearLayout>
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listview"/>
+        android:id="@+id/listview"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
