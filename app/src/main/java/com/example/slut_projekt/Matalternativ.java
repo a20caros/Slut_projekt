@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class Matalternativ extends AppCompatActivity {
 
-    private ListView listview;
+    private ListView listView;
     ArrayAdapter<Mat> adapter;
 
 
@@ -34,6 +34,9 @@ public class Matalternativ extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matalternativ);
         try{
+            adapter = new ArrayAdapter<>(this,R.layout.list_textview);
+            listView = findViewById(R.id.listview);
+            listView.setAdapter(adapter);
             new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=a20caros");
         }catch (Exception e){
             Log.e("MainActivity ==>","Something went wrong when reading textfile:\n\n"+ e.getMessage());
@@ -107,9 +110,9 @@ public class Matalternativ extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String json) {
-        adapter= new ArrayAdapter<Mat>(this, R.layout.activity_matalternativ);
-        listview = findViewById(R.id.listview);
-        listview.setAdapter(adapter);
+        adapter= new ArrayAdapter<Mat>(Matalternativ.this, R.layout.list_textview);
+        listView = findViewById(R.id.listview);
+        listView.setAdapter(adapter);
             Log.d("TAG", json);
         }
     }
