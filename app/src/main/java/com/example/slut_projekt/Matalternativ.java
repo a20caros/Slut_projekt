@@ -8,8 +8,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +21,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class Matalternativ extends AppCompatActivity {
 
@@ -27,6 +31,12 @@ public class Matalternativ extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matalternativ);
+        try{
+            new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=a20caros");
+        }catch (Exception e){
+            Log.e("MainActivity ==>","Something went wrong when reading textfile:\n\n"+ e.getMessage());
+        }
+
 
         Button button = findViewById(R.id.Hamburgare_knapp);
         button.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +105,7 @@ public class Matalternativ extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String json) {
+
             Log.d("TAG", json);
         }
     }
