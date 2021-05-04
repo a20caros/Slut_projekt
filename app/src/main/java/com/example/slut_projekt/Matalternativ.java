@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class Matalternativ extends AppCompatActivity {
 
     private ListView listview;
-    ArrayAdapter<> adapter;
+    ArrayAdapter<Mat> adapter;
 
 
     @Override
@@ -107,7 +107,7 @@ public class Matalternativ extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String json) {
-        adapter= new ArrayAdapter<>(this, R.layout.activity_matalternativ);
+        adapter= new ArrayAdapter<Mat>(this, R.layout.activity_matalternativ);
         listview = findViewById(R.id.listview);
         listview.setAdapter(adapter);
             Log.d("TAG", json);
