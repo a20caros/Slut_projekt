@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +27,7 @@ import java.util.ArrayList;
 
 public class Matalternativ extends AppCompatActivity {
 
+    private Mat maträtter;
     private ListView listView;
     ArrayAdapter<Mat> adapter;
     ArrayList<Mat> list;
@@ -86,6 +89,8 @@ public class Matalternativ extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String json) {
+        Gson gson = new Gson();
+        maträtter = gson.fromJson(json,Mat.class);
         adapter= new ArrayAdapter<Mat>(Matalternativ.this, R.layout.list_textview);
         listView = findViewById(R.id.listview);
         listView.setAdapter(adapter);
