@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Slut_projekt">
-        <activity android:name=".Matalternativ"></activity>
+        <activity android:name=".Hamburgare"></activity>
+        <activity android:name=".Matalternativ" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
