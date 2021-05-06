@@ -21,6 +21,14 @@ public class Mat {
         return location;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
     @Override
     public String toString() {
 

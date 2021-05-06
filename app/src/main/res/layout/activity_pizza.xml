@@ -22,11 +22,11 @@
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:id="@+id/textview_location"
+        android:layout_marginTop="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

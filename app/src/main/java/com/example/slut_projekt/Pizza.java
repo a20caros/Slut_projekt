@@ -39,8 +39,12 @@ public class Pizza extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("Namn");
         String location = intent.getStringExtra("Location");
+        String category = intent.getStringExtra("Category");
+        String cost = intent.getStringExtra("Cost");
         TextView textView = findViewById(R.id.textview);
         textView.setText(name);
+        TextView textView1 = findViewById(R.id.textview_location);
+        textView1.setText(location);
 
 
     }
