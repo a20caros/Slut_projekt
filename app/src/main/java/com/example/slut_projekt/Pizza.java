@@ -47,7 +47,7 @@ public class Pizza extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.textview_category);
         textView2.setText(category);
         TextView textView3 = findViewById(R.id.textview_company);
-        textView3.setText(category);
+        textView3.setText(company);
 
 
 
