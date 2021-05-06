@@ -40,13 +40,15 @@ public class Pizza extends AppCompatActivity {
         String location = intent.getStringExtra("Location");
         String category = intent.getStringExtra("Category");
         String company = intent.getStringExtra("Company");
-        String img = intent.getStringExtra("img");
         TextView textView = findViewById(R.id.textview);
         textView.setText(name);
         TextView textView1 = findViewById(R.id.textview_location);
         textView1.setText(location);
         TextView textView2 = findViewById(R.id.textview_category);
         textView2.setText(category);
+        TextView textView3 = findViewById(R.id.textview_company);
+        textView3.setText(category);
+
 
 
 
