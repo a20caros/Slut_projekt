@@ -45,10 +45,14 @@ public class Matalternativ extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Mat tmp = adapter.getItem(position);
                     Intent intent = new Intent (Matalternativ.this, Pizza.class);
+                    intent.putExtra("Namn", tmp.getName());
+                    intent.putExtra("Location", tmp.getLocation());
                     startActivity(intent);
                 }
             });
+
             new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=a20caros");
         }catch (Exception e){
             Log.e("MainActivity ==>","Something went wrong when reading textfile:\n\n"+ e.getMessage());
@@ -56,7 +60,6 @@ public class Matalternativ extends AppCompatActivity {
     }
     @SuppressLint("StaticFieldLeak")
     private class JsonTask extends AsyncTask<String, String, String> {
-
         private HttpURLConnection connection = null;
         private BufferedReader reader = null;
 
@@ -101,7 +104,6 @@ public class Matalternativ extends AppCompatActivity {
             adapter = new ArrayAdapter<Mat>(Matalternativ.this, R.layout.list_textview,maträtter);
             listView = findViewById(R.id.listview);
             listView.setAdapter(adapter);
-
             for (int i = 0; i < maträtter.length; i++) {
                 Log.d("==>", "Maträtt" + maträtter[i].getName());
             }
