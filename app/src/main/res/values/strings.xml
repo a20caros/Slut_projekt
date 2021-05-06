@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mat Biblotek</string>
+    <string name="app_name">Mat Bibliotek</string>
     <string name="title_activity_hamburgare">Hamburgare</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
