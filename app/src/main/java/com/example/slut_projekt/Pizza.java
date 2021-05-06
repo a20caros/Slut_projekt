@@ -28,9 +28,6 @@ import java.util.ArrayList;
 public class Pizza extends AppCompatActivity {
 
     private Mat[] maträtter;
-    //private ListView listView;
-    //ArrayAdapter<Mat> adapter;
-    //ArrayList<Mat> list;
 
 
     @Override
