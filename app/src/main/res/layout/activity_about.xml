@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About">
+    tools:context=".About"
+    android:background="#000000">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -15,4 +16,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/about" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appen Matbiblioteket riktar sig främst till personer som vill upptäcka den fina restaurangmaten, genom en enkel navigering i appen kan man enkelt klicka sig in på den maträtt man är sugen på och genom det hitta vart restaurangen är placerad."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffffff"
+        android:background="@color/design_default_color_primary"
+        android:padding="10dp">
+    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
