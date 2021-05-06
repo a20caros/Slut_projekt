@@ -41,4 +41,17 @@
         android:background="@color/design_default_color_primary"
         android:padding="10dp">
     </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alla bilder är tagna ifrån pixabay.com och går under Pixabay license."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="300dp"
+        android:textColor="#ffffff"
+        android:background="@color/design_default_color_primary"
+        android:padding="10dp">
+    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
