@@ -25,6 +25,9 @@ public class Mat {
         return category;
     }
 
+    public Auxdata getAuxdata() {
+        return auxdata;
+    }
 
     @Override
     public String toString() {
