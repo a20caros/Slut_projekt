@@ -25,6 +25,10 @@ public class Mat {
         return category;
     }
 
+    public String getCompany() {
+        return company;
+    }
+
     public Auxdata getAuxdata() {
         return auxdata;
     }
