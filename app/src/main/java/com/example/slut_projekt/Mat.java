@@ -25,9 +25,6 @@ public class Mat {
         return category;
     }
 
-    public int getCost() {
-        return cost;
-    }
 
     @Override
     public String toString() {

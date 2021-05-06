@@ -50,7 +50,6 @@ public class Matalternativ extends AppCompatActivity {
                     intent.putExtra("Namn", tmp.getName());
                     intent.putExtra("Location", tmp.getLocation());
                     intent.putExtra("Category", tmp.getCategory());
-                    intent.putExtra("Cost", tmp.getCost());
                     startActivity(intent);
                 }
             });

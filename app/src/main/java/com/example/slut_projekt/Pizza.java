@@ -35,16 +35,17 @@ public class Pizza extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pizza);
 
-
         Intent intent = getIntent();
         String name = intent.getStringExtra("Namn");
         String location = intent.getStringExtra("Location");
         String category = intent.getStringExtra("Category");
-        String cost = intent.getStringExtra("Cost");
         TextView textView = findViewById(R.id.textview);
         textView.setText(name);
         TextView textView1 = findViewById(R.id.textview_location);
         textView1.setText(location);
+        TextView textView2 = findViewById(R.id.textview_category);
+        textView2.setText(category);
+
 
 
     }
