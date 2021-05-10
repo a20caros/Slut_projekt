@@ -31,6 +31,7 @@ public class Matalternativ extends AppCompatActivity {
     private ListView listView;
     ArrayAdapter<Mat> adapter;
     ArrayList<Mat> list;
+    private Auxdata[] bilder;
 
 
     @Override
