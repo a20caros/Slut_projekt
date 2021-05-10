@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -40,6 +41,7 @@ public class Pizza extends AppCompatActivity {
         String location = intent.getStringExtra("Location");
         String category = intent.getStringExtra("Category");
         String company = intent.getStringExtra("Company");
+        String Img = intent.getStringExtra("Img");
         TextView textView = findViewById(R.id.textview);
         textView.setText(name);
         TextView textView1 = findViewById(R.id.textview_location);
@@ -49,6 +51,7 @@ public class Pizza extends AppCompatActivity {
         TextView textView3 = findViewById(R.id.textview_company);
         textView3.setText(company);
 
+        ImageView imageView = findViewById(R.id.images_view_restaurang);
 
 
 
