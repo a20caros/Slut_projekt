@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -52,7 +53,9 @@ public class Pizza extends AppCompatActivity {
         textView3.setText(company);
 
         ImageView imageView = findViewById(R.id.images_view_restaurang);
-
+        Picasso.get()
+                .load(Img)
+                .into(imageView);
 
 
     }
