@@ -31,33 +31,31 @@ public class Matalternativ extends AppCompatActivity {
     private ListView listView;
     ArrayAdapter<Mat> adapter;
     ArrayList<Mat> list;
-    private Auxdata[] bilder;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matalternativ);
+        list = new ArrayList<>();
+        adapter = new ArrayAdapter<>(this,R.layout.list_textview);
+        listView = findViewById(R.id.listview);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Mat tmp = adapter.getItem(position);
+                Intent intent = new Intent (Matalternativ.this, Pizza.class);
+                intent.putExtra("Namn", tmp.getName());
+                intent.putExtra("Location", tmp.getLocation());
+                intent.putExtra("Category", tmp.getCategory());
+                intent.putExtra("Company", tmp.getCompany());
+                intent.putExtra("Img", tmp.getAuxdata().getImg());
+
+                startActivity(intent);
+            }
+        });
         try{
-            list = new ArrayList<>();
-            adapter = new ArrayAdapter<>(this,R.layout.list_textview);
-            listView = findViewById(R.id.listview);
-            listView.setAdapter(adapter);
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Mat tmp = adapter.getItem(position);
-                    Intent intent = new Intent (Matalternativ.this, Pizza.class);
-                    intent.putExtra("Namn", tmp.getName());
-                    intent.putExtra("Location", tmp.getLocation());
-                    intent.putExtra("Category", tmp.getCategory());
-                    intent.putExtra("Company", tmp.getCompany());
-                    intent.putExtra("Img", tmp.getAuxdata().getImg());
-
-                    startActivity(intent);
-                }
-            });
-
             new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=a20caros");
         }catch (Exception e){
             Log.e("MainActivity ==>","Something went wrong when reading textfile:\n\n"+ e.getMessage());
@@ -107,7 +105,6 @@ public class Matalternativ extends AppCompatActivity {
             Gson gson = new Gson();
             maträtter = gson.fromJson(json, Mat[].class);
             adapter = new ArrayAdapter<Mat>(Matalternativ.this, R.layout.list_textview,maträtter);
-            listView = findViewById(R.id.listview);
             listView.setAdapter(adapter);
             for (int i = 0; i < maträtter.length; i++) {
                 Log.d("==>", "Maträtt" + maträtter[i].getName());
