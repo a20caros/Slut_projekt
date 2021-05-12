@@ -10,9 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -45,7 +43,7 @@ public class Matalternativ extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Mat tmp = adapter.getItem(position);
-                Intent intent = new Intent (Matalternativ.this, Pizza.class);
+                Intent intent = new Intent (Matalternativ.this, Restaurang.class);
                 intent.putExtra("Namn", tmp.getName());
                 intent.putExtra("Location", tmp.getLocation());
                 intent.putExtra("Category", tmp.getCategory());
