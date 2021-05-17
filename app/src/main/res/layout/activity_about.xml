@@ -32,7 +32,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Appen Matbiblioteket riktar sig främst till personer som vill upptäcka den fina restaurangmaten, genom en enkel navigering i appen kan man enkelt klicka sig in på den maträtt man är sugen på och genom det hitta vart restaurangen är placerad."
+        android:text="Appen Matbibliotek riktar sig främst till personer som geografiskt är placerade i Stockholm och som vill upptäcka den fina restaurangmaten som staden erbjuder. Matbibliotek hjälper den matsugna att hitta den rätta restaurangmaten för rätt tillfälle. I Matbibliotektet finns det restauranger för alla åldrar och smaklökar vilket gör appen Matbibliotek till en enkel och hjälpande applikation när rätt restaurangmat ska beställas."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
